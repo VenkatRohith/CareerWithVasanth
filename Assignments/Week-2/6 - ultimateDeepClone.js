@@ -81,6 +81,7 @@ TestCases
 1. check for both array & object referential equality
 2. check for circular references at all nested levels
 3. check for Error to be thrown if null or undefined is passed
+4. Check for undefined or null as values
 
 Questions?
 Why do we require WeakMap? - Current logic is not at all using WeakMap and circular references

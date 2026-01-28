@@ -21,12 +21,13 @@ profile.welcome.call(friend);
 
 /*
 Expected Output
-Hi, I'm Candidate
-Welcome, Candidate
 
-Explanation:
-The above output is what I am expecting as I feel arrow functions can also be called using call as I feel call just takes in what is the object
-that this function has to execute in context to and to which object this has to point out.
+Hi, I'm undefined
+Welcome, Vasanth
 
-Time taken to solve - 3min
+Explanation
+As we can not change the context of Arrow function. Context can only be defined when arrow function is created so it will take global as this context.
+In case of normal function the context can be changed.
+
+Time taken to solve - 3min (re-attempt)
  */

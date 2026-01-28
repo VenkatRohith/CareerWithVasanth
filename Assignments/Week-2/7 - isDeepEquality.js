@@ -62,7 +62,6 @@ console.log("Test 4 (Primitive):", isDeepEqual(10, 10)); // Expected: true
 // console.log("Test 4 (Primitive):", isDeepEqual(null, undefined)); // Expected: true
 // console.log("Test 4 (Primitive):", isDeepEqual(10, "101")); // Expected: false
 // console.log("Test 4 (Primitive):", isDeepEqual(profileA, { ...profileA })); // Expected: true
-
 /*
 For reference purposes only for future revision
 
@@ -75,6 +74,20 @@ TestCases
 6. complex vs same complex and diff value
 7. complex vs different complex
 8. null & undefined checks
+
+Primitives
+1. string ✅
+2. boolean ✅
+3. number ✅
+4. bigint ✅
+5. symbol (need to check)
+6. null ✅
+7. undefined ✅
+
+Complex
+1. object ✅
+2. function ✅
+3. date ✅
 
 Time taken to solve this using multiple output checking - 18min (took time for checking all test cases)
 */
