@@ -1,0 +1,56 @@
+.like-btn {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: white;
+  color: #888;
+  border: 3px solid #888;
+  border-radius: 2rem;
+  padding: 0.5rem 1.25rem;
+  outline: none;
+}
+
+.like-btn:hover {
+  border-color: #f00;
+  outline: none;
+}
+
+.like-btn:focus {
+  outline: none;
+}
+
+.like-btn > .icon {
+  width: 2rem;
+  height: 2rem;
+  fill: gray;
+}
+
+.like-btn > .text {
+  height: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.like-btn:hover > .text {
+  color: #f00;
+}
+.like-btn:hover > .icon {
+  fill: #f00;
+}
+
+.like-btn__liked,
+.like-btn__liked:hover {
+  background-color: #f00;
+  border-color: #f00;
+}
+
+.like-btn__liked > .text,
+.like-btn__liked:hover > .text {
+  color: #fff;
+}
+
+.like-btn__liked > .icon,
+.like-btn__liked:hover > .icon {
+  fill: #fff;
+}
