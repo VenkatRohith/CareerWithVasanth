@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-export default function Week3() {
+export default function Week4() {
   const navigate = useNavigate();
   return (
     <div style={{ margin: "auto", textAlign: "center" }}>
