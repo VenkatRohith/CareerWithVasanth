@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router";
-import "./App.css";
 
-function App() {
+export default function Week3() {
   const navigate = useNavigate();
   return (
     <div>
@@ -16,7 +15,10 @@ function App() {
         }}
       >
         {Array.from({ length: 7 }, (_, idx) => idx + 1).map((val, key) => (
-          <button key={key} onClick={() => navigate(`/${val}`)}>
+          <button
+            key={key}
+            onClick={() => navigate(`/assignments/week-3/${val}`)}
+          >
             {val}
           </button>
         ))}
@@ -24,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
