@@ -1,21 +1,15 @@
 # Assignment Helper
 
-- Navigate to `Assignments\Week-3` folder
+- Install the `node_modules` using `pnpm`
 
 ```cmd
-cd Assignments\Week-3
-```
-
-- Install the `node_modules` using `npm`
-
-```cmd
-npm i
+pnpm i
 ```
 
 - Start the local server
 
 ```cmd
-npm run dev
+pnpm dev
 ```
 
 - Use the assignment number in the route or click the Assignment Number button to navigate to different assignments
