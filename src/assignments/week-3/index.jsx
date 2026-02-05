@@ -14,10 +14,10 @@ export default function Week3() {
           margin: "1rem auto auto",
         }}
       >
-        {Array.from({ length: 5 }, (_, idx) => idx + 1).map((val, key) => (
+        {Array.from({ length: 7 }, (_, idx) => idx + 1).map((val, key) => (
           <button
             key={key}
-            onClick={() => navigate(`/assignments/week-4/${val}`)}
+            onClick={() => navigate(`/assignments/week-3/${val}`)}
           >
             {val}
           </button>
