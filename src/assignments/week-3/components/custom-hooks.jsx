@@ -35,7 +35,18 @@ export default function CustomHooks() {
   if (error) {
     return <div>{error}</div>;
   }
-  return <div>{JSON.stringify(data)}</div>;
+  return (
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {JSON.stringify(data)}
+    </div>
+  );
 }
 
 /*

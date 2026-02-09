@@ -45,13 +45,19 @@ export default function DOMInteraction() {
   }, []);
 
   return (
-    <>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           width: "20rem",
           height: "20rem",
           border: "1px solid red",
-          margin: "auto",
           display: "block",
         }}
         ref={boundingContainerRef}
@@ -69,7 +75,7 @@ export default function DOMInteraction() {
           ref={circleRef}
         ></div>
       </div>
-    </>
+    </div>
   );
 }
 
