@@ -1,6 +1,6 @@
 import { lazy } from "react";
 
-const Week3Home = lazy(() => import("../assignments/week-3"));
+const Week3 = lazy(() => import("../assignments/week-3"));
 const RealTimeUI = lazy(
   () => import("../assignments/week-3/components/realtime-ui"),
 );
@@ -23,6 +23,8 @@ const GeneralMachineCoding2 = lazy(
   () => import("../assignments/week-3/components/general-machine-coding-2"),
 );
 
+const Week4 = lazy(() => import("../assignments/week-4"));
+
 // Export component references (not JSX) so this module contains plain JS values
 export const assignmentRoutes = [
   {
@@ -30,7 +32,7 @@ export const assignmentRoutes = [
     children: [
       {
         index: true,
-        element: Week3Home,
+        element: Week3,
       },
       {
         path: "1",
@@ -62,4 +64,5 @@ export const assignmentRoutes = [
       },
     ],
   },
+  { path: "week-4", children: [{ index: true, element: Week4 }] },
 ];

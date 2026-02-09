@@ -3,14 +3,16 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router";
+import Loader from "./loader";
 import { assignmentRoutes } from "./routes/assignment-routes";
+import { inSessionRoutes } from "./routes/in-session-routes";
 
 const App = lazy(() => import("./App"));
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route index element={<App />} />
           <Route path="assignments">
@@ -34,11 +36,29 @@ createRoot(document.getElementById("root")).render(
               </Route>
             ))}
           </Route>
-          {/* <Route path="in-session">
-            {inSessionRoutes.map((route) => (
-              <Route key={route.path || "index"} {...route} />
-            ))}
-          </Route> */}
+          {
+            <Route path="in-session">
+              {inSessionRoutes.map((route) => (
+                <Route key={route.path} path={route.path}>
+                  {route.children.map((child) =>
+                    child.index ? (
+                      <Route
+                        index
+                        key={`${route.path}-index`}
+                        element={<child.element />}
+                      />
+                    ) : (
+                      <Route
+                        key={`${route.path}-${child.path}`}
+                        path={child.path}
+                        element={<child.element />}
+                      />
+                    ),
+                  )}
+                </Route>
+              ))}
+            </Route>
+          }
         </Routes>
       </Suspense>
     </BrowserRouter>
