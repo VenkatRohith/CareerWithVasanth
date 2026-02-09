@@ -27,7 +27,14 @@ import useWindowSize from "../hooks/useWindowSize";
 export default function CustomHooks() {
   const { width, height } = useWindowSize();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       Width: {width}, Height: {height}
     </div>
   );

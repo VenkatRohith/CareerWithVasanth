@@ -166,7 +166,15 @@ export default function MultiStepForm() {
   };
 
   return (
-    <div style={{ margin: "auto", width: "min-content" }}>
+    <div
+      style={{
+        width: "min-content",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        margin: "auto",
+      }}
+    >
       <Step
         stepState={currentState}
         handlFieldChange={handlFieldChange}

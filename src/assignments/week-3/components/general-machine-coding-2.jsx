@@ -60,13 +60,17 @@ export default function LikeButton() {
   };
 
   return (
-    <button
-      onClick={handleButtonClick}
-      className={`like-btn ${result ? "like-btn__liked" : ""}`}
-    >
-      <span className="icon">{loading ? <LoadingIcon /> : <HeartIcon />}</span>
-      <span className="text">Like</span>
-    </button>
+    <div className="btn-container">
+      <button
+        onClick={handleButtonClick}
+        className={`like-btn ${result ? "like-btn__liked" : ""}`}
+      >
+        <span className="icon">
+          {loading ? <LoadingIcon /> : <HeartIcon />}
+        </span>
+        <span className="text">Like</span>
+      </button>
+    </div>
   );
 }
 
