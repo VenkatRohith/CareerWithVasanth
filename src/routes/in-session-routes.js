@@ -1,24 +1,36 @@
 import { lazy } from "react";
 
-const InSessionHome = lazy(() => import("../in-session/App"));
-const InSessionDay1 = lazy(() => import("../in-session/day-1"));
-const InSessionDay2 = lazy(() => import("../in-session/day-2"));
+const InSession = lazy(() => import("../in-session"));
+const BoxDecolouring = lazy(() => import("../in-session/box-decoloring"));
+const TrafficLight = lazy(() => import("../in-session/traffic-light"));
+const MultipleButton = lazy(() => import("../in-session/multiple-button"));
+const LargeListDemo = lazy(() => import("../in-session/large-list-demo"));
 
-const InSessionRoutes = [
+export const inSessionRoutes = [
+  /* {
+    path:
+  }, */
   {
-    path: "in-session",
     children: [
       {
         index: true,
-        element: InSessionHome,
+        element: InSession,
       },
       {
-        path: "day-1",
-        element: InSessionDay1,
+        path: "week-2",
+        element: MultipleButton,
       },
       {
-        path: "day-2",
-        element: InSessionDay2,
+        path: "week-3",
+        element: TrafficLight,
+      },
+      {
+        path: "week-4",
+        element: LargeListDemo,
+      },
+      {
+        path: "week-5",
+        element: BoxDecolouring,
       },
     ],
   },

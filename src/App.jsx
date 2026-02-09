@@ -18,6 +18,7 @@ function App() {
           margin: "auto",
         }}
       >
+        <button onClick={() => navigate("/in-session")}>In Session</button>
         <button onClick={() => navigate("/assignments/week-3")}>
           Week 3 Assignments
         </button>
