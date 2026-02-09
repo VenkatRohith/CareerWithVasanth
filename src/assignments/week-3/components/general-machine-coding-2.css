@@ -1,5 +1,12 @@
+.btn-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .like-btn {
-  text-align: center;
   margin: auto;
   display: flex;
   gap: 0.5rem;
@@ -28,8 +35,7 @@
 }
 
 .like-btn > .text {
-  height: 100%;
-  margin-bottom: 0.25rem;
+  line-height: 2rem;
 }
 
 .like-btn:hover > .text {

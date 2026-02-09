@@ -100,6 +100,8 @@ export default function MortagageCalculator() {
         display: "flex",
         flexDirection: "column",
         gap: "0.5rem",
+        height: "100vh",
+        justifyContent: "center",
       }}
     >
       <Field
