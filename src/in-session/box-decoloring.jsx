@@ -65,14 +65,12 @@ export default function BoxDecolouring() {
 
   const handleBoxClick = (boxNum) => {
     if (disableInteraction) return;
-    setBoxColor(boxNum);
     if (colorState[boxNum]) {
-      historyRef.current = historyRef.current.filter(
-        (_, idx) => idx === boxNum,
-      );
+      historyRef.current = historyRef.current.filter((val) => val !== boxNum);
     } else {
       historyRef.current.push(boxNum);
     }
+    setBoxColor(boxNum);
     if (historyRef.current.length === 7) {
       setDisableInteraction(true);
       setTimeout(() => undoClicks(historyRef.current.length - 1), 3000);
