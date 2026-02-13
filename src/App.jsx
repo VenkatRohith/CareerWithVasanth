@@ -6,8 +6,8 @@ function App() {
 
   return (
     <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h1>Assignments Hub</h1>
-      <p>Select an assignment to get started</p>
+      <h1>Career With Vasanth Hub</h1>
+      <p>Select in session or an assignment to get started</p>
       <div
         style={{
           display: "flex",

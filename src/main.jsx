@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router";
+import RoleBasedRouteGuarding from "./assignments/week-4/components/role-based-route-guarding";
 import Loader from "./loader";
 import { assignmentRoutes } from "./routes/assignment-routes";
 import { inSessionRoutes } from "./routes/in-session-routes";
@@ -25,6 +26,34 @@ createRoot(document.getElementById("root")).render(
                       key={`${route.path}-index`}
                       element={<child.element />}
                     />
+                  ) : child.children ? (
+                    <Route key={child.path} path={child.path}>
+                      {child.children.map((subChild) =>
+                        subChild.index ? (
+                          <Route
+                            index
+                            key={`${subChild.path}-index`}
+                            element={<subChild.element />}
+                          />
+                        ) : (
+                          <Route
+                            key={subChild.key}
+                            path={subChild.path}
+                            element={
+                              subChild.allowedRole ? (
+                                <RoleBasedRouteGuarding
+                                  allowedRole={subChild.allowedRole}
+                                >
+                                  {<subChild.element />}
+                                </RoleBasedRouteGuarding>
+                              ) : (
+                                <subChild.element />
+                              )
+                            }
+                          />
+                        ),
+                      )}
+                    </Route>
                   ) : (
                     <Route
                       key={`${route.path}-${child.path}`}
