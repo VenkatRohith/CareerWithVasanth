@@ -1,0 +1,26 @@
+.suggestions-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  flex-direction: column;
+  height: 10rem;
+  max-height: 10rem;
+  overflow: auto;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-container__show {
+  display: flex;
+}
+
+@media (prefers-color-scheme: light) {
+  .suggestions-container {
+    border: 1px solid black;
+  }
+}
